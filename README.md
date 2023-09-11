@@ -1,4 +1,5 @@
 ### Grupo
+- Giuliano Penido de Paula Júnior ( Fullstack )
 - Pedro Henrique Alves Moutinho ( Fullstack )
 - Rafael Neves ( Fullstack )
 
