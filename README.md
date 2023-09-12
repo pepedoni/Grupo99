@@ -2,6 +2,7 @@
 - Giuliano Penido de Paula Júnior ( Fullstack )
 - Pedro Henrique Alves Moutinho ( Fullstack )
 - Rafael Neves ( Fullstack )
+- Mateus Brandão Damasceno Góes ( Backend )
 
 ### Descrição do Projeto
 O objetivo do sistema é de oferecer suporte para a gestão de uma oficina de manutenção de eletrodomésticos. Os clientes trazem seus aparelhos defeituosos, que passam por uma análise realizada pelos funcionários. Com base nessa análise, os funcionários propõem um orçamento, que é apresentado ao cliente para sua análise e consideração. O cliente tem a liberdade de aprovar ou recusar a proposta de orçamento, e também pode acompanhar o progresso e andamento do serviço em tempo real.
@@ -19,6 +20,7 @@ O objetivo do sistema é de oferecer suporte para a gestão de uma oficina de ma
 - Vue
 - Postgres
 - Github
+- Typescript
 
 ### Backlog do Produto
 Como cliente, eu gostaria de me logar no sistema<br>
