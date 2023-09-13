@@ -22,6 +22,9 @@ O objetivo do sistema é de oferecer suporte para a gestão de uma oficina de ma
 - Github
 - Typescript
 
+### Link figma
+https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-id=0-1&mode=design&t=4kaRnzJHNfqL095D-0
+
 ### Backlog do Produto
 - Como funcionário, eu gostaria de criar novos usuários
 - Como cliente, eu gostaria de solicitar um novo serviço 
