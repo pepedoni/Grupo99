@@ -26,7 +26,7 @@ O objetivo do sistema é de oferecer suporte para a gestão de uma oficina de ma
 https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-id=0-1&mode=design&t=4kaRnzJHNfqL095D-0
 
 ### Backlog do Produto
-- Como funcionário, eu gostaria de criar novos usuários
+- Como funcionário, eu gostaria de criar novos usuários 
 - Como cliente, eu gostaria de solicitar um novo serviço 
 - Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
 - Como cliente, eu gostaria de aprovar ou recusar um orçamento para um serviço que eu solicitei
@@ -45,74 +45,74 @@ https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-
 #### História 1:  Como cliente, eu gostaria de me logar no sistema
 Tarefas:
 
-- Preparação do ambiente Node.js, Express e Postgres
-- Preparação do ambiente Vue.js
-- Criação da entidade de Usuário
-- Criação de rota para cadastrar cliente
-- Criação de rota para logar no sistema
-- Criação da tela de cadastro de usuários
-- Criação da tela de login
+- Preparação do ambiente Node.js, Express e Postgres [ Mateus ]
+- Preparação do ambiente Vue.js [ Rafael ]
+- Criação da entidade de Usuário [ Mateus ]
+- Criação de rota para cadastrar cliente [ Mateus ]
+- Criação de rota para logar no sistema [ Mateus ]
+- Criação da tela de cadastro de usuários [ Rafael ]
+- Criação da tela de login [ Rafael ]
 
 #### História 2: Como funcionário, eu gostaria de criar novos usuários
 Tarefas:
 
-- Criar tela que lista os usuários
-- Criar rota que lista os usuários
-- Criar rota que salva um novo usuário
-- Criar formulário para inserção de novo usuário
+- Criar tela que lista os usuários [ Rafael ]
+- Criar rota que lista os usuários [ Mateus ]
+- Criar rota que salva um novo usuário [ Mateus ]
+- Criar formulário para inserção de novo usuário [ Rafael ]
 
 
 #### História 3: Como cliente, eu gostaria de solicitar um novo serviço
 Tarefas:
 
-- Criar a entidade de Serviços
-- Adicionar botão de solicitar novo serviço a tela inicial do cliente
-- Criar tela para solicitação de novo serviço
-- Criar rota para criação de novo serviço
+- Criar a entidade de Serviço [ Mateus ]
+- Adicionar botão de solicitar novo serviço a tela inicial do cliente [ Giuliano ]
+- Criar tela para solicitação de novo serviço [ Rafael ]
+- Criar rota para criação de novo serviço [ Giuliano ]
 
 #### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
 Tarefas:
 
-- Criar um componente de serviço
-- Criar componente de lista de serviços
-- Adicionar à tela inicial do cliente uma lista dos serviços em aberto
-- Adicionar à tela inicial do cliente uma lista dos serviços já concluídos do cliente
-- Criar endpoint que retorna a lista de serviços
-- Adicionar à tela inicial do cliente um filtro para os serviços
+- Criar um componente de serviço [ Giuliano ]
+- Criar componente de lista de serviços [ Giuliano ]
+- Adicionar à tela inicial do cliente uma lista dos serviços em aberto [ Rafael ]
+- Adicionar à tela inicial do cliente uma lista dos serviços já concluídos do cliente [ Rafael ]
+- Criar endpoint que retorna a lista de serviços [ Mateus ]
+- Adicionar à tela inicial do cliente um filtro para os serviços [ Rafael ]
 
 
 #### História 5: Como cliente, eu gostaria de aprovar ou recusar orçamento para um serviço que eu solicitei
 Tarefas:
 
-- Implementar tela para visualização do orçamento
-- Implementar rota de aprovação/reprovação do orçamento [ Pedro }
-- Implementar botão para aprovar orçamento
-- Implementar botão para reprovar orçamento
+- Implementar tela para visualização do orçamento [ Giuliano ]
+- Implementar rota de aprovação/reprovação do orçamento [ Pedro ]
+- Implementar botão para aprovar orçamento [ Giuliano ]
+- Implementar botão para reprovar orçamento [ Giuliano ]
 
 #### História 6: Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
 Tarefas:
 
 - Criar entidade de Orçamento [ Pedro ]
-- Criar tela para listagem de serviços pendentes de orçamento
+- Criar tela para listagem de serviços pendentes de orçamento [ Rafael ]
 - Implementar rota que lista serviços pendentes de orçamento [ Pedro ]
 - Implementar rota de criação de orçamento [ Pedro ]
-- Implementar tela com formulário para criação de orçamento
+- Implementar tela com formulário para criação de orçamento [ Giuliano ]
 
 
 #### História 7: Como funcionário, eu gostaria de iniciar um novo serviço e atualizar o andamento do mesmo
 Tarefas:
 
 - Criar rota para atualizar status do serviço [ Pedro ]
-- Criar tela que lista serviços que já passaram da etapa de orçamento
-- Implementar ação de “iniciar serviço”
-- Implementar ação de “serviço aguardando peças”
-- Implementar ação de “serviço finalizado”
-- Implementar ação de “serviço entregue”
+- Criar tela que lista serviços que já passaram da etapa de orçamento [ Rafael ]
+- Implementar ação de “iniciar serviço” [ Giuliano ]
+- Implementar ação de “serviço aguardando peças” [ Giuliano ]
+- Implementar ação de “serviço finalizado” [ Giuliano ]
+- Implementar ação de “serviço entregue” [ Giuliano ]
 
 
 #### História 8: Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei.
 Tarefas:
 
-- Configurar serviço de smtp
-- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço
-
+- Configurar serviço de smtp [ Pedro ]
+- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Pedro ]
+ 
