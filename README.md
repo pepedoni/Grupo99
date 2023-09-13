@@ -23,20 +23,20 @@ O objetivo do sistema é de oferecer suporte para a gestão de uma oficina de ma
 - Typescript
 
 ### Backlog do Produto
-Como funcionário, eu gostaria de criar novos usuários
-Como cliente, eu gostaria de solicitar um novo serviço 
-Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
-Como cliente, eu gostaria de aprovar ou recusar um orçamento para um serviço que eu solicitei
-Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
-Como funcionário, eu gostaria de iniciar um novo serviço e atualizar o andamento do mesmo 
-Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei.
-Como funcionário, eu gostaria de visualizar as peças disponíveis no estoque
-Como funcionário, eu gostaria de alocar peças do estoque para um reparo
-Como cliente, eu gostaria de avaliar um serviço
-Como funcionário, eu gostaria de receber notificações por e-mail quando um cliente aprovar um orçamento para um serviço.
-Como funcionário, eu gostaria de registrar o tempo gasto em cada etapa de um serviço para fins de relatório e análise.
-Como funcionário, eu gostaria de gerar relatórios mensais sobre o desempenho da equipe e o status dos serviços em andamento. 
-Como cliente, eu gostaria de solicitar um novo orçamento sem precisar preencher todos os dados novamente
+- Como funcionário, eu gostaria de criar novos usuários
+- Como cliente, eu gostaria de solicitar um novo serviço 
+- Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
+- Como cliente, eu gostaria de aprovar ou recusar um orçamento para um serviço que eu solicitei
+- Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
+- Como funcionário, eu gostaria de iniciar um novo serviço e atualizar o andamento do mesmo 
+- Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei.
+- Como funcionário, eu gostaria de visualizar as peças disponíveis no estoque
+- Como funcionário, eu gostaria de alocar peças do estoque para um reparo
+- Como cliente, eu gostaria de avaliar um serviço
+- Como funcionário, eu gostaria de receber notificações por e-mail quando um cliente aprovar um orçamento para um serviço.
+- Como funcionário, eu gostaria de registrar o tempo gasto em cada etapa de um serviço para fins de relatório e análise.
+- Como funcionário, eu gostaria de gerar relatórios mensais sobre o desempenho da equipe e o status dos serviços em andamento. 
+- Como cliente, eu gostaria de solicitar um novo orçamento sem precisar preencher todos os dados novamente
 
 ### Backlog do Sprint 1
 #### História 1:  Como cliente, eu gostaria de me logar no sistema
