@@ -42,7 +42,7 @@ https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-
 - Como cliente, eu gostaria de solicitar um novo orçamento sem precisar preencher todos os dados novamente
 
 ### Backlog do Sprint 1
-#### História 1:  Como cliente, eu gostaria de me logar no sistema
+#### História 1:  Como usuário, eu gostaria de me logar no sistema
 Tarefas:
 
 - Preparação do ambiente Node.js, Express e Postgres [ Mateus ]
