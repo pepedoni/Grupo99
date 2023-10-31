@@ -13,7 +13,7 @@ export default class ServiceOrderController {
     try {
       const serviceOrder = await this.serviceOrderService.createServiceOrder(request.body as ServiceOrder);
 
-      return response.status(201).json({ serviceOrder });
+      return response.status(201).json(serviceOrder);
     } catch (error: any) {
       return response.status(400).json({ error: error.message });
     }
@@ -21,9 +21,11 @@ export default class ServiceOrderController {
 
   listServiceOrder: RequestHandler = async (request, response) => {
     try {
-      const clientId = response.locals.user.userId;
       const serviceOrderFilter = request.body as Partial<ServiceOrder>
-      const serviceOrders = await this.serviceOrderService.listServiceOrder({ ...serviceOrderFilter, clientId });
+      if (response.locals.user.type == "client") {
+        serviceOrderFilter.clientId = response.locals.user.userId;
+      }
+      const serviceOrders = await this.serviceOrderService.listServiceOrder(serviceOrderFilter);
 
       return response.status(200).json({ serviceOrders });
     } catch (error: any) {

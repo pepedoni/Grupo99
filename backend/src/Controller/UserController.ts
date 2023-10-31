@@ -13,7 +13,7 @@ export default class UserController {
     try {
       const user = await this.userService.createUser(request.body as User);
 
-      return response.status(201).json({ user });
+      return response.status(201).json(user);
     } catch (error: any) {
       return response.status(400).json({ error: error.message });
     }
