@@ -35,6 +35,11 @@ const routes = [
         component: () => import('@/views/ServiceOrders.vue'),
       },
       {
+        path: '/pendingQuotes',
+        name: 'PendingQuotes',
+        component: () => import('@/views/PendingQuotes.vue'),
+      },
+      {
         path: '/serviceOrder/create',
         name: 'CreateServiceOrder',
         component: () => import('@/views/CreateServiceOrder.vue'),

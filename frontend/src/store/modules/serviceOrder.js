@@ -47,8 +47,14 @@ export default {
             })
         },
         getServiceOrders({commit, state}) {
-            console.log('to aquii')
             axios.get('/serviceOrder').then(response => {
+                commit('setItems', { items: response.data.serviceOrders })
+            }).catch(error => {
+                console.log(error)
+            })
+        },
+        getServiceOrdersPendingQuotes({commit, state}) {
+            axios.get('/serviceOrder?status=waitingQuote').then(response => {
                 commit('setItems', { items: response.data.serviceOrders })
             }).catch(error => {
                 console.log(error)
