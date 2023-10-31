@@ -53,7 +53,7 @@ export default {
       this.$router.push('/serviceOrders')
     },
     viewPendingQuotes() {
-      this.$router.push('/quotes')
+      this.$router.push('/pendingQuotes')
     }
   }
 }
