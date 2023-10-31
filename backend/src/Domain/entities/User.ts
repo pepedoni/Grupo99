@@ -23,7 +23,7 @@ export default class User {
   @Column({ type: 'varchar', length: '255' })
   name: string;
 
-  @Column({ type: 'varchar', length: '255' })
+  @Column({ type: 'varchar', length: '255', unique: true })
   email: string;
 
   @Column({ type: 'varchar', length: '15' })
@@ -32,7 +32,7 @@ export default class User {
   @Column({ type: 'varchar', length: '30' })
   phoneNumber?: string;
 
-  @Column({ type: 'varchar', length: '30' })
+  @Column({ type: 'text' })
   password: string;
 
 }

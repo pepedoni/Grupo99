@@ -19,4 +19,15 @@ export default class UserController {
     }
   };
 
+  login: RequestHandler = async (request, response) => {
+    try {
+      const { email, password } = request.body;
+      const jwt = await this.userService.login(email, password);
+
+      response.status(200).json({ jwt });
+    } catch (error: any) {
+      response.status(400).json({ error: error.message });
+    }
+  };
+
 }

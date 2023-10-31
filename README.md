@@ -49,7 +49,7 @@ Tarefas:
 - Preparação do ambiente Vue.js [ Pedro ] ✅
 - Criação da entidade de Usuário [ Rafael ] ✅
 - Criação de rota para cadastrar cliente [ Rafael ] ✅
-- Criação de rota para logar no sistema [ Mateus ]
+- Criação de rota para logar no sistema [ Mateus ] ✅
 - Criação da tela de cadastro de usuários [ Rafael ]
 - Criação da tela de login [ Rafael ]
 
