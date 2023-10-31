@@ -28,6 +28,11 @@ const routes = [
         path: '/users/create',
         name: 'CreateUser',
         component: () => import('@/views/CreateUser.vue'),
+      },
+      {
+        path: '/quotes/create',
+        name: 'CreateQuote',
+        component: () => import('@/views/CreateQuote.vue'),
       }
     ],
   },
