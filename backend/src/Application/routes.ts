@@ -14,7 +14,7 @@ const router = Router();
   router.post('/user', UserController.createUser);
   router.post('/login', UserController.login);
 
-  router.post('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, ['client']), ServiceOrderController.createServiceOrder);
+  router.post('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.createServiceOrder);
   router.get('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.listServiceOrder);
 })();
 
