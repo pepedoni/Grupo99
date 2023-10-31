@@ -78,10 +78,10 @@ Retorna 200 OK. Usado para validar se aplicação está de pé.
 ```
 {
   "name": "teste",
-	"email": "client@client.com",
-	"type": "client",
-	"phoneNumber"?: "31 999999999",
-	"password": "client"
+  "email": "client@client.com",
+  "type": "client",
+  "phoneNumber"?: "31 999999999",
+  "password": "client"
 }
 ```
 
