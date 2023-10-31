@@ -1,35 +1,28 @@
-import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
-import ServiceOrder from "./ServiceOrder";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('Quote')
 export default class Quote {
   constructor(id: number,
     value: number,
     hoursExpected: number,
-    status: "waiting" | "approved" | "disapproved",
-    serviceOrder: ServiceOrder,
+    serviceOrderId: number,
   ) {
     this.id = id;
     this.value = value;
     this.hoursExpected = hoursExpected;
-    this.status = status;
-    this.serviceOrder = serviceOrder;
+    this.serviceOrderId = serviceOrderId;
   }
 
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @Column({ type: 'decimal', precision: 10, scale: 2, default: 0 }) 
+  @Column({ type: 'decimal', precision: 10, scale: 2, default: 0 })
   value: number;
 
   @Column({ type: 'int' })
   hoursExpected: number;
 
-  @Column({ type: 'varchar', length: '30' })
-  status: "waiting" | "approved" | "disapproved";
-
-  @OneToOne(() => ServiceOrder)
-  @JoinColumn()
-  serviceOrder: ServiceOrder;
+  @Column({ type: 'int' })
+  serviceOrderId: number;
 
 }
