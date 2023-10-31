@@ -45,10 +45,10 @@ https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-
 #### História 1:  Como usuário, eu gostaria de me logar no sistema
 Tarefas:
 
-- Preparação do ambiente Node.js, Express e Postgres [ Mateus ]
-- Preparação do ambiente Vue.js [ Rafael ]
-- Criação da entidade de Usuário [ Mateus ]
-- Criação de rota para cadastrar cliente [ Mateus ]
+- Preparação do ambiente Node.js, Express e Postgres [ Rafael ] ✅
+- Preparação do ambiente Vue.js [ Pedro ] ✅
+- Criação da entidade de Usuário [ Rafael ] ✅
+- Criação de rota para cadastrar cliente [ Rafael ] ✅
 - Criação de rota para logar no sistema [ Mateus ]
 - Criação da tela de cadastro de usuários [ Rafael ]
 - Criação da tela de login [ Rafael ]
@@ -92,7 +92,7 @@ Tarefas:
 #### História 6: Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
 Tarefas:
 
-- Criar entidade de Orçamento [ Pedro ]
+- Criar entidade de Orçamento [ Pedro ] ✅
 - Criar tela para listagem de serviços pendentes de orçamento [ Rafael ]
 - Implementar rota que lista serviços pendentes de orçamento [ Pedro ]
 - Implementar rota de criação de orçamento [ Pedro ]
