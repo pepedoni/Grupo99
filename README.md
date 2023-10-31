@@ -69,7 +69,7 @@ Tarefas:
 - Adicionar botão de solicitar novo serviço a tela inicial do cliente [ Pedro ] ✅
 - Criar tela para solicitação de novo serviço [ Pedro ] ✅
 - Criar tela para detalhamento de um serviço [ Pedro ]
-- Criar rota para criação de novo serviço [ Giuliano ]
+- Criar rota para criação de novo serviço [ Rafael ] ✅
 
 #### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
 Tarefas:
