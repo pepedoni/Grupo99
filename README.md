@@ -97,8 +97,8 @@ Tarefas:
 
 - Criar entidade de Orçamento [ Pedro ] ✅
 - Criar tela para listagem de serviços pendentes de orçamento [ Rafael ]
-- Implementar rota que lista serviços pendentes de orçamento [ Pedro ]
-- Implementar rota de criação de orçamento [ Pedro ]
+- Implementar rota que lista serviços pendentes de orçamento [ Rafael ] ✅
+- Implementar rota de criação de orçamento [ Rafael ] ✅
 - Implementar tela com formulário para criação de orçamento [ Giuliano ]
 
 

@@ -22,7 +22,7 @@ export default class Quote {
   @Column({ type: 'int' })
   hoursExpected: number;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', unique: true })
   serviceOrderId: number;
 
 }

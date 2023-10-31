@@ -12,9 +12,8 @@ export default class QuoteController {
   createQuote: RequestHandler = async (request, response) => {
     try {
       const quoteData = request.body as Quote;
-      const serviceOrderId = Number(request.params.serviceOrderId);
 
-      const quote = await this.quoteService.createQuote(quoteData, serviceOrderId)
+      const quote = await this.quoteService.createQuote(quoteData)
 
       return response.status(201).json(quote);
     } catch (error: any) {
@@ -22,18 +21,15 @@ export default class QuoteController {
     }
   };
 
-  // listServiceOrder: RequestHandler = async (request, response) => {
-  //   try {
-  //     const serviceOrderFilter = request.query as Partial<ServiceOrder>
+  listQuote: RequestHandler = async (request, response) => {
+    try {
+      const quoteFilter = request.query as Partial<Quote>
 
-  //     if (response.locals.user.type == "client") {
-  //       serviceOrderFilter.clientId = response.locals.user.userId;
-  //     }
-  //     const serviceOrders = await this.serviceOrderService.listServiceOrder(serviceOrderFilter);
+      const quotes = await this.quoteService.listQuote(quoteFilter);
 
-  //     return response.status(200).json({ serviceOrders });
-  //   } catch (error: any) {
-  //     return response.status(400).json({ error: error.message });
-  //   }
-  // };
+      return response.status(200).json({ quotes });
+    } catch (error: any) {
+      return response.status(400).json({ error: error.message });
+    }
+  };
 }
