@@ -24,5 +24,8 @@ export default class UserService implements IUserService {
     return createJWT(user.id, user.type);
   }
 
+  public async find(userFilters: Partial<User>): Promise<User[]> {
+    return await this.userRepository.findBy(userFilters);
+  }
 
 }

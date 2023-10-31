@@ -13,9 +13,9 @@ export default class UserController {
     try {
       const user = await this.userService.createUser(request.body as User);
 
-      response.status(201).json({ user });
+      return response.status(201).json({ user });
     } catch (error: any) {
-      response.status(400).json({ error: error.message });
+      return response.status(400).json({ error: error.message });
     }
   };
 
@@ -24,9 +24,20 @@ export default class UserController {
       const { email, password } = request.body;
       const jwt = await this.userService.login(email, password);
 
-      response.status(200).json({ jwt });
+      return response.status(200).json({ jwt });
     } catch (error: any) {
-      response.status(400).json({ error: error.message });
+      return response.status(400).json({ error: error.message });
+    }
+  };
+
+  listUser: RequestHandler = async (request, response) => {
+    try {
+      const userFilters = request.body as Partial<User>;
+
+      const users = await this.userService.find(userFilters);
+      return response.status(200).json({ users });
+    } catch (error: any) {
+      return response.status(400).json({ error: error.message });
     }
   };
 
