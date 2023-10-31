@@ -1,6 +1,6 @@
 <template>
-    <v-row justify="center">
-        <v-card max-width="400" min-width="400">
+    <v-row justify="center" >
+        <v-card max-width="400" min-width="400" > 
             <v-card-title align="center">Adcionar Usuário</v-card-title>
             <v-card-item>
                 <v-form>

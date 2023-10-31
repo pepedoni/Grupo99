@@ -1,6 +1,6 @@
 <template>
-    <v-row justify="center">
-        <v-card height="300" max-width="400" min-width="400">
+    <v-row justify="center" >
+        <v-card height="300" max-width="400" min-width="400" class="elevation-5">
             <v-card-title align="center">Login</v-card-title>
             <v-card-item>
                 <v-form>

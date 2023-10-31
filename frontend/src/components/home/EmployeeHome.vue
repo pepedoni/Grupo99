@@ -3,7 +3,7 @@
       <v-col
         cols="auto"
       >
-        <v-card height="180" max-width="400">
+        <v-card height="180" max-width="400" class="elevation-5">
             <v-card-title>Orçamentos Pendentes</v-card-title>
             <v-card-item>
             <div>
@@ -15,7 +15,7 @@
           </v-card-item>
           <v-card-actions>
             <v-btn @click="">
-              Solicitar
+              Visualizar
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -24,7 +24,7 @@
       <v-col
         cols="auto"
       >
-        <v-card height="180" max-width="400">
+        <v-card height="180" max-width="400" class="elevation-5">
             <v-card-title>Visualizar Serviços</v-card-title>
             <v-card-item>
             <div>
