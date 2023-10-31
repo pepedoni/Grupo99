@@ -30,6 +30,11 @@ const routes = [
         component: () => import('@/views/CreateUser.vue'),
       },
       {
+        path: '/serviceOrders',
+        name: 'ServiceOrders',
+        component: () => import('@/views/ServiceOrders.vue'),
+      },
+      {
         path: '/serviceOrder/create',
         name: 'CreateServiceOrder',
         component: () => import('@/views/CreateServiceOrder.vue'),

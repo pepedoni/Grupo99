@@ -46,6 +46,13 @@ export default {
                 console.log(error)
             })
         },
+        getServiceOrders({commit, state}) {
+            axios.get('/serviceOrder').then(response => {
+                commit('setItems', { items: response.data.serviceOrders })
+            }).catch(error => {
+                console.log(error)
+            })
+        },
         refuseQuote({ commit, dispatch, state }, payload) {
             axios.put(`/serviceOrder/refuseQuote/${payload.id}`).then(response => {
                 dispatch('getServiceOrder', {id: payload.id})
