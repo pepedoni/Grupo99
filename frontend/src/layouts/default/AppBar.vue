@@ -6,7 +6,7 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
 
-      <v-btn>
+      <v-btn @click="goToHome">
         Home
       </v-btn>
     </v-app-bar>
@@ -15,11 +15,14 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import router from '@/router';
 
 export default {
-  computed: {
-    ...mapState('login', ['user']),
+  name: 'AppBar',
+  methods: {
+    goToHome() {
+      router.push({ name: 'Home' })
+    },
   }
-}
+};
 </script>

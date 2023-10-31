@@ -14,11 +14,13 @@ import { createApp } from 'vue'
 import { registerPlugins } from '@/plugins'
 import store from './store'
 import axios from 'axios'
+import vuetify from './config/vuetify'
 
 const app = createApp(App)
 
 registerPlugins(app)
 app.use(store)
+app.use(vuetify)
 
 axios.defaults.baseURL = 'http://127.0.0.1:3001'
 

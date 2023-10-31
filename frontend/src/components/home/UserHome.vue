@@ -15,7 +15,7 @@
             </div>
           </v-card-item>
           <v-card-actions>
-            <v-btn>
+            <v-btn @click="createQuote">
               Solicitar
             </v-btn>
           </v-card-actions>
@@ -47,3 +47,16 @@
     </v-row>
 
 </template>
+
+<script>
+
+export default {
+  computed: {
+  },
+  methods: {
+    createQuote() {
+      this.$router.push('/quotes/create')
+    }
+  }
+}
+</script>

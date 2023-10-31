@@ -49,25 +49,26 @@ Tarefas:
 - Preparação do ambiente Vue.js [ Pedro ] ✅
 - Criação da entidade de Usuário [ Rafael ] ✅
 - Criação de rota para cadastrar cliente [ Rafael ] ✅
-- Criação de rota para logar no sistema [ Mateus ] ✅
-- Criação da tela de cadastro de usuários [ Rafael ]
-- Criação da tela de login [ Rafael ]
+- Criação de rota para logar no sistema [ Rafael ] ✅
+- Criação da tela de cadastro de usuários [ Pedro ] ✅
+- Criação da tela de login [ Pedro ] ✅
 
 #### História 2: Como funcionário, eu gostaria de criar novos usuários
 Tarefas:
 
-- Criar tela que lista os usuários [ Rafael ]
+- Criar tela que lista os usuários [ Pedro ] ✅
 - Criar rota que lista os usuários [ Mateus ]
 - Criar rota que salva um novo usuário [ Mateus ]
-- Criar formulário para inserção de novo usuário [ Rafael ]
+- Criar formulário para inserção de novo usuário [ Pedro ] ✅
 
 
 #### História 3: Como cliente, eu gostaria de solicitar um novo serviço
 Tarefas:
 
-- Criar a entidade de Serviço [ Mateus ]
-- Adicionar botão de solicitar novo serviço a tela inicial do cliente [ Giuliano ]
-- Criar tela para solicitação de novo serviço [ Rafael ]
+- Criar a entidade de Serviço [ Giuliano ] ✅
+- Adicionar botão de solicitar novo serviço a tela inicial do cliente [ Pedro ] ✅
+- Criar tela para solicitação de novo serviço [ Pedro ] ✅
+- Criar tela para detalhamento de um serviço [ Pedro ]
 - Criar rota para criação de novo serviço [ Giuliano ]
 
 #### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
