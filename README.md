@@ -42,7 +42,7 @@ https://www.figma.com/file/onuOYXS4jN1Y540ymszFVZ/Trabalho-PDS?type=design&node-
 - Como cliente, eu gostaria de solicitar um novo orçamento sem precisar preencher todos os dados novamente
 
 ### Backlog do Sprint 1
-#### História 1:  Como usuário, eu gostaria de me logar no sistema
+#### História 1:  Como usuário, eu gostaria de me logar no sistema ✅
 Tarefas:
 
 - Preparação do ambiente Node.js, Express e Postgres [ Rafael ] ✅
@@ -52,14 +52,17 @@ Tarefas:
 - Criação de rota para logar no sistema [ Rafael ] ✅
 - Criação da tela de cadastro de usuários [ Pedro ] ✅
 - Criação da tela de login [ Pedro ] ✅
+- Direcionar usuário para tela de login quando ele não estiver logado ✅
 
-#### História 2: Como funcionário, eu gostaria de criar novos usuários
+#### História 2: Como funcionário, eu gostaria de criar novos usuários ✅
 Tarefas:
 
 - Criar tela que lista os usuários [ Pedro ] ✅
 - Criar rota que lista os usuários [ Rafael ] ✅
+- Integrar lista de usuários com a rota [ Pedro ] ✅
 - Criar rota que salva um novo usuário [ Rafael ] ✅
 - Criar formulário para inserção de novo usuário [ Pedro ] ✅
+- Integrar formulário com rota [ Pedro ] ✅
 
 
 #### História 3: Como cliente, eu gostaria de solicitar um novo serviço
