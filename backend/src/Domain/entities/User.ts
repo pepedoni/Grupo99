@@ -6,12 +6,14 @@ export default class User {
     name: string,
     email: string,
     type: "client" | "employee" | "admin",
-    phoneNumber?: string
+    password: string,
+    phoneNumber?: string,
   ) {
     this.id = id;
     this.name = name;
     this.email = email;
     this.type = type;
+    this.password = password;
     this.phoneNumber = phoneNumber;
   }
 
@@ -29,5 +31,8 @@ export default class User {
 
   @Column({ type: 'varchar', length: '30' })
   phoneNumber?: string;
+
+  @Column({ type: 'varchar', length: '30' })
+  password: string;
 
 }
