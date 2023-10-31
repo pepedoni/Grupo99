@@ -57,8 +57,8 @@ Tarefas:
 Tarefas:
 
 - Criar tela que lista os usuários [ Pedro ] ✅
-- Criar rota que lista os usuários [ Mateus ]
-- Criar rota que salva um novo usuário [ Mateus ]
+- Criar rota que lista os usuários [ Rafael ] ✅
+- Criar rota que salva um novo usuário [ Rafael ] ✅
 - Criar formulário para inserção de novo usuário [ Pedro ] ✅
 
 
