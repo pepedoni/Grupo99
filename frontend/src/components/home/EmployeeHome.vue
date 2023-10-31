@@ -3,19 +3,18 @@
       <v-col
         cols="auto"
       >
-        <v-card height="180" max-width="400" class="elevation-5">
-            <v-card-title>Orçamentos Pendentes</v-card-title>
+        <v-card height="180" max-width="400">
+            <v-card-title>Histórico de Serviços</v-card-title>
             <v-card-item>
             <div>
               <div class="text-caption">
-                Visualize e crie orçamentos para as solicitações que ainda não possuem orçamento.
-                Lembre-se de informar qual o valor do orçamento ao usuário
-              </div> 
+                Clique no botão abaixo para consultar o histórico de serviços prestados.
+              </div>
             </div>
           </v-card-item>
           <v-card-actions>
-            <v-btn @click="">
-              Visualizar
+            <v-btn @click="listServiceOrders">
+              Consultar histórico
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -24,23 +23,38 @@
       <v-col
         cols="auto"
       >
-        <v-card height="180" max-width="400" class="elevation-5">
-            <v-card-title>Visualizar Serviços</v-card-title>
+        <v-card height="180" max-width="400">
+            <v-card-title>Orçamentos Pendentes</v-card-title>
             <v-card-item>
             <div>
               <div class="text-caption">
-                Visualize todos os serviços que ainda não foram atualizados. 
-                Lembre-se de alterar o status do serviço a medida em que for evoluindo no mesmo
+                Acompanhe a partir do link abaixo todas as suas solicitações de orçamentos ainda não enviadas para o cliente.
               </div>
             </div>
           </v-card-item>
           <v-card-actions>
-            <v-btn @click="">
-              Visualizar
+            <v-btn @click="viewPendingQuotes">
+              Acompanhar
             </v-btn>
           </v-card-actions>
 
         </v-card>
       </v-col>
     </v-row>
+
 </template>
+
+<script>
+export default {
+  computed: {
+  },
+  methods: {
+    listServiceOrders() {
+      this.$router.push('/serviceOrders')
+    },
+    viewPendingQuotes() {
+      this.$router.push('/quotes')
+    }
+  }
+}
+</script>

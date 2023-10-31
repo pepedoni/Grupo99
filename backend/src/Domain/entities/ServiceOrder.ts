@@ -1,6 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
-
-import Quote from "./Quote";
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('ServiceOrder')
 export default class ServiceOrder {
@@ -31,7 +29,4 @@ export default class ServiceOrder {
 
   @Column({ type: 'int' })
   clientId: number
-
-  @OneToOne(() => Quote, (quote) => quote.serviceOrder)
-  quote: Quote | undefined
 }

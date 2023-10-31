@@ -34,8 +34,7 @@ aprovar ou recusar a proposta de orçamento, e também pode acompanhar o progres
   "id": "number",
   "value": "number",
   "hoursExpected": "number",
-  "status": "string (waiting | approved | disapproved)",
-  "serviceOrder": "Reference to ServiceOrder entity"
+  "serviceOrderId": "number"
 }
 ```
 ### `ServiceOrder`
@@ -45,8 +44,7 @@ aprovar ou recusar a proposta de orçamento, e também pode acompanhar o progres
   "device": "string",
   "problemDescription": "string",
   "status": "string (waitingApproval | refused | repairing | finished)",
-  "clientId": "number",
-  "quote": "Reference to Quote entity (optional)"
+  "clientId": "number"
 }
 ```
 
@@ -144,8 +142,7 @@ Cria uma ordem de serviço. Se o tipo de usuário passado no jwt for "client", u
     "device": "string",
     "problemDescription": "string",
     "status": "string (waitingApproval | refused | repairing | finished)",
-    "clientId": "number",
-    "quote": "Reference to Quote entity (optional)"
+    "clientId": "number"
   }
 ```
 
@@ -171,7 +168,57 @@ Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", 
     "problemDescription": "string",
     "status": "string (waitingApproval | refused | repairing | finished)",
     "clientId": "number",
-    "quote": "Reference to Quote entity (optional)"
+    "quote": {
+      "id": "number",
+      "value": "number",
+      "hoursExpected": "number",
+      "serviceOrderId": "number"
+    }
+  }
+]
+```
+
+### `POST /quote`
+
+-header ``authorization: JWT_TOKEN`` (obtido na rota de login)
+- Body: 
+```
+{
+  "value": "number",
+  "hoursExpected": "number",
+	"serviceOrderId": "number"
+}
+```
+- Response: 
+```
+"serviceOrders": [
+  {
+    "id": "number",
+    "value": "number",
+    "hoursExpected": "number",
+    "serviceOrderId": "number"
+  }
+]
+```
+
+### `GET /quote`
+
+-header ``authorization: JWT_TOKEN`` (obtido na rota de login)
+- Body: 
+```
+{
+  "id"?: "number",
+	"serviceOrderId"?: "number"
+}
+```
+- Response: 
+```
+"serviceOrders": [
+  {
+    "id": "number",
+    "value": "number",
+    "hoursExpected": "number",
+    "serviceOrderId": "number"
   }
 ]
 ```
