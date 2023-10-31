@@ -79,12 +79,10 @@ Tarefas:
 #### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
 Tarefas:
 
-- Criar um componente de serviço [ Giuliano ]
-- Criar componente de lista de serviços [ Giuliano ]
-- Adicionar à tela inicial do cliente uma lista dos serviços em aberto [ Rafael ]
-- Adicionar à tela inicial do cliente uma lista dos serviços já concluídos do cliente [ Rafael ]
+- Adicionar à tela inicial um botão que direciona para lista do cliente [ Pedro ] ✅
+- Criar tela que exibe os serviços solicitados por um cliente [ Pedro ]
 - Criar endpoint que retorna a lista de serviços [ Rafael ] ✅
-- Adicionar à tela inicial do cliente um filtro para os serviços [ Rafael ]
+- Adicionar filtro a tela que lista os serviços do cliente [ Pedro ]
 
 
 #### História 5: Como cliente, eu gostaria de aprovar ou recusar orçamento para um serviço que eu solicitei
