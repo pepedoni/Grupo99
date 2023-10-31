@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center">
-        <v-card align="center">
+        <v-card align="center" class="elevation-5 pl-2 pr-2 pb-2 pt-2">
             <v-card-title>
                 <h1>{{ order.device }}</h1>
             </v-card-title>

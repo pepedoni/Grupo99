@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-app-bar color="black" >
+    <v-app-bar color="black" class="elevation-5">
       <v-app-bar-title>
         Grupo 99
       </v-app-bar-title>

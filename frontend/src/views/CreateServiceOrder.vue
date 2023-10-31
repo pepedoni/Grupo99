@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center">
-        <v-card max-width="400" min-width="400">
+        <v-card max-width="400" min-width="400" class="elevation-5">
             <v-card-title align="center">Solicitar Reparo</v-card-title>
             <v-card-item>
                 <v-form>

@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     listServiceOrders() {
-      this.$router.push('/serviceOrder/history')
+      this.$router.push('/serviceOrders')
     },
     viewPendingQuotes() {
       this.$router.push('/quotes')

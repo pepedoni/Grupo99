@@ -47,6 +47,7 @@ export default {
             })
         },
         getServiceOrders({commit, state}) {
+            console.log('to aquii')
             axios.get('/serviceOrder').then(response => {
                 commit('setItems', { items: response.data.serviceOrders })
             }).catch(error => {

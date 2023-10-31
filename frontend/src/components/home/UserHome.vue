@@ -1,9 +1,9 @@
 <template>
-    <v-row justify="center">
+    <v-row justify="center" >
       <v-col
         cols="auto"
       >
-        <v-card height="200" max-width="400">
+        <v-card height="200" max-width="400" class="elevation-5">
             <v-card-title>Solicitação de reparo</v-card-title>
             <v-card-item>
             <div>
@@ -11,7 +11,7 @@
                 Para realizar uma nova solicitação de Reparo de aparelhos eletrodoméstico
                 clique no botão abaixo e preencha suas informações.
                 Um orçamento estimado será gerado para você em cerca de 2 a 5 dias úteis.
-              </div>
+              </div> 
             </div>
           </v-card-item>
           <v-card-actions>
@@ -25,7 +25,7 @@
       <v-col
         cols="auto"
       >
-        <v-card height="200" max-width="400">
+        <v-card height="200" max-width="400" class="elevation-5">
             <v-card-title>Acompanhar Solicitações</v-card-title>
             <v-card-item>
             <div>
@@ -45,7 +45,6 @@
         </v-card>
       </v-col>
     </v-row>
-
 </template>
 
 <script>

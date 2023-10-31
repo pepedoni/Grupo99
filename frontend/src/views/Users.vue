@@ -7,7 +7,7 @@
             :headers="headers"
             :items="items"
             item-value="name"
-            class="elevation-1"
+            class="elevation-5"
         ></v-data-table>
     </v-container>
      
