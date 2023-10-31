@@ -58,7 +58,7 @@ export default {
       this.$router.push('/serviceOrder/create')
     },
     viewServiceOrders() {
-      this.$router.push('/serviceOrder/6')
+      this.$router.push('/serviceOrders')
     }
   }
 }

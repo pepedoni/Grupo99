@@ -52,7 +52,7 @@ Tarefas:
 - Criação de rota para logar no sistema [ Rafael ] ✅
 - Criação da tela de cadastro de usuários [ Pedro ] ✅
 - Criação da tela de login [ Pedro ] ✅
-- Direcionar usuário para tela de login quando ele não estiver logado ✅
+- Direcionar usuário para tela de login quando ele não estiver logado [ Pedro ] ✅
 
 #### História 2: Como funcionário, eu gostaria de criar novos usuários ✅
 Tarefas:
@@ -76,13 +76,12 @@ Tarefas:
 - Criar tela para detalhamento de um serviço [ Pedro ] ✅
 
 
-#### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
+#### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei ✅
 Tarefas:
 
 - Adicionar à tela inicial um botão que direciona para lista do cliente [ Pedro ] ✅
-- Criar tela que exibe os serviços solicitados por um cliente [ Pedro ]
+- Criar tela que exibe os serviços solicitados por um cliente [ Pedro ] ✅
 - Criar endpoint que retorna a lista de serviços [ Rafael ] ✅
-- Adicionar filtro a tela que lista os serviços do cliente [ Pedro ]
 
 
 #### História 5: Como cliente, eu gostaria de aprovar ou recusar orçamento para um serviço que eu solicitei

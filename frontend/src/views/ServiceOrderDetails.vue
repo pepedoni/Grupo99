@@ -48,6 +48,11 @@
                     </v-col>
                 </v-row>
             </v-card-item>
+            <v-card-actions>
+                <v-row align="center" justify="center">
+                    <v-btn color="primary" @click="this.$router.push('/serviceOrders')">Visualizar Todos os Pedidos</v-btn>
+                </v-row>
+            </v-card-actions>
         </v-card>
         
     </v-row>
