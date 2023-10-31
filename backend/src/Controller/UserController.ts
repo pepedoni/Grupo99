@@ -32,7 +32,7 @@ export default class UserController {
 
   listUser: RequestHandler = async (request, response) => {
     try {
-      const userFilters = request.body as Partial<User>;
+      const userFilters = request.query as Partial<User>;
 
       const users = await this.userService.find(userFilters);
       return response.status(200).json({ users });

@@ -88,7 +88,7 @@ Tarefas:
 Tarefas:
 
 - Implementar tela para visualização do orçamento [ Giuliano ]
-- Implementar rota de aprovação/reprovação do orçamento [ Rafael ]
+- Implementar rota de aprovação/reprovação do orçamento [ Rafael ] ✅
 - Implementar botão para aprovar orçamento [ Pedro ] ✅
 - Implementar botão para reprovar orçamento [ Pedro ] ✅
 
@@ -105,7 +105,7 @@ Tarefas:
 #### História 7: Como funcionário, eu gostaria de iniciar um novo serviço e atualizar o andamento do mesmo
 Tarefas:
 
-- Criar rota para atualizar status do serviço [ Pedro ]
+- Criar rota para atualizar status do serviço [ Rafael ] ✅
 - Criar tela que lista serviços que já passaram da etapa de orçamento [ Rafael ]
 - Implementar ação de “iniciar serviço” [ Giuliano ]
 - Implementar ação de “serviço aguardando peças” [ Giuliano ]

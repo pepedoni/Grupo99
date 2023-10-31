@@ -29,7 +29,6 @@ export default class ServiceOrderController {
   listServiceOrder: RequestHandler = async (request, response) => {
     try {
       const serviceOrderFilter = request.query as Partial<ServiceOrder>
-
       if (response.locals.user.type == "client") {
         serviceOrderFilter.clientId = response.locals.user.userId;
       }
@@ -40,6 +39,18 @@ export default class ServiceOrderController {
       }))
 
       return response.status(200).json({ serviceOrders: hidratedServiceOrders });
+    } catch (error: any) {
+      return response.status(400).json({ error: error.message });
+    }
+  };
+  updateServiceOrder: RequestHandler = async (request, response) => {
+    try {
+      const serviceOrderData = request.body as Partial<ServiceOrder>
+      const serviceOrderId = Number(request.params.id);
+
+      const serviceOrder = await this.serviceOrderService.updateServiceOrder(serviceOrderId, serviceOrderData);
+
+      return response.status(200).json({ serviceOrder });
     } catch (error: any) {
       return response.status(400).json({ error: error.message });
     }

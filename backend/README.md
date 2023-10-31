@@ -97,7 +97,7 @@ Retorna 200 OK. Usado para validar se aplicação está de pé.
 
 ### `GET /user`
 -header ``authorization: JWT_TOKEN`` (obtido na rota de login)
-- Body: 
+- Query: 
 ```
 {
   "name"?: "teste",
@@ -146,11 +146,35 @@ Cria uma ordem de serviço. Se o tipo de usuário passado no jwt for "client", u
   }
 ```
 
+### `PATCH /serviceOrder/:id`
+
+-header ``authorization: JWT_TOKEN`` (obtido na rota de login)
+- Body: 
+```
+{
+  "device": "string",
+  "problemDescription": "string",
+  "status": "string (waitingApproval | refused | repairing | finished)",
+  "clientId"?: "number"
+}
+```
+
+- Response: 
+```
+  {
+    "id": "number",
+    "device": "string",
+    "problemDescription": "string",
+    "status": "string (waitingApproval | refused | repairing | finished)",
+    "clientId": "number"
+  }
+```
+
 ### `GET /serviceOrder`
 Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", utiliza o clientId do mesmo.
 
 -header ``authorization: JWT_TOKEN`` (obtido na rota de login)
-- Body: 
+- Query: 
 ```
 {
   "device"?: "string",
@@ -204,7 +228,7 @@ Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", 
 ### `GET /quote`
 
 -header ``authorization: JWT_TOKEN`` (obtido na rota de login)
-- Body: 
+- Query: 
 ```
 {
   "id"?: "number",
