@@ -1,18 +1,19 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
+import ServiceOrder from "./ServiceOrder";
 
 @Entity('Quote')
-export default class Orcamento {
+export default class Quote {
   constructor(id: number,
     value: number,
     hoursExpected: number,
     status: "waiting" | "approved" | "disapproved",
-    idOrderOfService: number,
+    serviceOrder: ServiceOrder,
   ) {
     this.id = id;
     this.value = value;
     this.hoursExpected = hoursExpected;
     this.status = status;
-    this.idOrderOfService = idOrderOfService;
+    this.serviceOrder = serviceOrder;
   }
 
   @PrimaryGeneratedColumn('increment')
@@ -27,7 +28,8 @@ export default class Orcamento {
   @Column({ type: 'varchar', length: '30' })
   status: "waiting" | "approved" | "disapproved";
 
-  @Column({ type: 'int' })
-  idOrderOfService: number;
+  @OneToOne(() => ServiceOrder)
+  @JoinColumn()
+  serviceOrder: ServiceOrder;
 
 }

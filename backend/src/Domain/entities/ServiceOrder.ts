@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne } from "typeorm";
+
+import Quote from "./Quote";
 
 @Entity('ServiceOrder')
 export default class ServiceOrder {
@@ -24,4 +26,7 @@ export default class ServiceOrder {
 
   @Column({ type: 'varchar', length: '15' })
   status: "waitingApproval" | "refused" | "repairing" | "finished";
+
+  @OneToOne(() => Quote, (quote) => quote.serviceOrder)
+  quote: Quote | undefined
 }
