@@ -152,9 +152,9 @@ Cria uma ordem de serviço. Se o tipo de usuário passado no jwt for "client", u
 - Body: 
 ```
 {
-  "device": "string",
-  "problemDescription": "string",
-  "status": "string (waitingApproval | refused | repairing | finished)",
+  "device"?: "string",
+  "problemDescription"?: "string",
+  "status"?: "string (waitingApproval | refused | repairing | finished)",
   "clientId"?: "number"
 }
 ```
