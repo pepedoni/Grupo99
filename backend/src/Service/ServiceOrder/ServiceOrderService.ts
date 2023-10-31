@@ -13,4 +13,10 @@ export default class ServiceOrderService implements IServiceOrderService {
     await this.serviceOrderRepository.save(createdServiceOrder);
     return createdServiceOrder;
   }
+
+  async listServiceOrder(serviceOrderFilter: Partial<ServiceOrder>): Promise<ServiceOrder[]> {
+    const createdServiceOrders = this.serviceOrderRepository.findBy(serviceOrderFilter)
+    return createdServiceOrders;
+  }
+
 }

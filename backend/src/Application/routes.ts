@@ -15,6 +15,7 @@ const router = Router();
   router.post('/login', UserController.login);
 
   router.post('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, ['client']), ServiceOrderController.createServiceOrder);
+  router.get('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.listServiceOrder);
 })();
 
 export default router;

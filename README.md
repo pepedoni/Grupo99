@@ -78,7 +78,7 @@ Tarefas:
 - Criar componente de lista de serviços [ Giuliano ]
 - Adicionar à tela inicial do cliente uma lista dos serviços em aberto [ Rafael ]
 - Adicionar à tela inicial do cliente uma lista dos serviços já concluídos do cliente [ Rafael ]
-- Criar endpoint que retorna a lista de serviços [ Mateus ]
+- Criar endpoint que retorna a lista de serviços [ Rafael ] ✅
 - Adicionar à tela inicial do cliente um filtro para os serviços [ Rafael ]
 
 

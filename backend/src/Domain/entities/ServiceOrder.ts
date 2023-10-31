@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn, OneToOne } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
 
 import Quote from "./Quote";
 import User from "./User";
@@ -30,7 +30,7 @@ export default class ServiceOrder {
   @Column({ type: 'varchar', length: '15' })
   status: "waitingApproval" | "refused" | "repairing" | "finished";
 
-  @OneToOne(() => User, (user) => user.id)
+  @Column({ type: 'int' })
   clientId: number
 
   @OneToOne(() => Quote, (quote) => quote.serviceOrder)
