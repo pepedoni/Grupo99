@@ -25,7 +25,8 @@ export default class ServiceOrderController {
 
   listServiceOrder: RequestHandler = async (request, response) => {
     try {
-      const serviceOrderFilter = request.body as Partial<ServiceOrder>
+      const serviceOrderFilter = request.query as Partial<ServiceOrder>
+      
       if (response.locals.user.type == "client") {
         serviceOrderFilter.clientId = response.locals.user.userId;
       }

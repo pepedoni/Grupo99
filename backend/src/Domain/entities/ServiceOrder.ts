@@ -1,14 +1,13 @@
 import { Column, Entity, PrimaryGeneratedColumn, OneToOne, JoinColumn } from "typeorm";
 
 import Quote from "./Quote";
-import User from "./User";
 
 @Entity('ServiceOrder')
 export default class ServiceOrder {
   constructor(id: number,
     device: string,
     problemDescription: string,
-    status: "waitingApproval" | "refused" | "repairing" | "finished",
+    status: "waitingQuote" | "waitingApproval" | "refused" | "repairing" | "finished" | "delivered",
     clientId: number,
   ) {
     this.id = id;
@@ -28,7 +27,7 @@ export default class ServiceOrder {
   problemDescription: string;
 
   @Column({ type: 'varchar', length: '15' })
-  status: "waitingApproval" | "refused" | "repairing" | "finished";
+  status: "waitingQuote" | "waitingApproval" | "refused" | "repairing" | "finished" | "delivered";
 
   @Column({ type: 'int' })
   clientId: number

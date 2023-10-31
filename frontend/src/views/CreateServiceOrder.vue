@@ -20,7 +20,7 @@
                 <v-spacer></v-spacer>
                 <v-btn 
                     color="primary"
-                    @click="createQuote"
+                    @click="createServiceOrder"
                 >
                     Solicitar
                 </v-btn>
@@ -36,14 +36,14 @@
   
     export default {
         computed: {
-            ...mapFields('quote', ['newQuote.device', 'newQuote.problemDescription']),
+            ...mapFields('serviceOrder', ['newServiceOrder.device', 'newServiceOrder.problemDescription']),
         },
         data() {
             return {
             }
         },
         methods: {
-            ...mapActions('quote', ['createQuote']),
+            ...mapActions('serviceOrder', ['createServiceOrder']),
         }
     }
 </script>

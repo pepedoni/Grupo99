@@ -9,6 +9,7 @@ export default class ServiceOrderService implements IServiceOrderService {
   }
 
   async createServiceOrder(serviceOrder: ServiceOrder): Promise<ServiceOrder> {
+    serviceOrder.status = 'waitingQuote'
     const createdServiceOrder = this.serviceOrderRepository.create(serviceOrder);
     await this.serviceOrderRepository.save(createdServiceOrder);
     return createdServiceOrder;

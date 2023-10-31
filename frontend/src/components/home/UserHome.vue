@@ -37,7 +37,7 @@
             </div>
           </v-card-item>
           <v-card-actions>
-            <v-btn>
+            <v-btn @click="viewServiceOrders">
               Acompanhar
             </v-btn>
           </v-card-actions>
@@ -55,7 +55,10 @@ export default {
   },
   methods: {
     createQuote() {
-      this.$router.push('/quotes/create')
+      this.$router.push('/serviceOrder/create')
+    },
+    viewServiceOrders() {
+      this.$router.push('/serviceOrder/6')
     }
   }
 }

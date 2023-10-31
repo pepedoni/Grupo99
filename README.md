@@ -65,14 +65,16 @@ Tarefas:
 - Integrar formulário com rota [ Pedro ] ✅
 
 
-#### História 3: Como cliente, eu gostaria de solicitar um novo serviço
+#### História 3: Como cliente, eu gostaria de solicitar um novo serviço ✅
 Tarefas:
 
 - Criar a entidade de Serviço [ Giuliano ] ✅
 - Adicionar botão de solicitar novo serviço a tela inicial do cliente [ Pedro ] ✅
 - Criar tela para solicitação de novo serviço [ Pedro ] ✅
-- Criar tela para detalhamento de um serviço [ Pedro ]
 - Criar rota para criação de novo serviço [ Rafael ] ✅
+- Integrar tela de criação de novo serviço com rota [ Pedro ] ✅
+- Criar tela para detalhamento de um serviço [ Pedro ] ✅
+
 
 #### História 4: Como cliente, eu gostaria de acompanhar o andamento dos serviços que solicitei
 Tarefas:
@@ -89,9 +91,9 @@ Tarefas:
 Tarefas:
 
 - Implementar tela para visualização do orçamento [ Giuliano ]
-- Implementar rota de aprovação/reprovação do orçamento [ Pedro ]
-- Implementar botão para aprovar orçamento [ Giuliano ]
-- Implementar botão para reprovar orçamento [ Giuliano ]
+- Implementar rota de aprovação/reprovação do orçamento [ Rafael ]
+- Implementar botão para aprovar orçamento [ Pedro ] ✅
+- Implementar botão para reprovar orçamento [ Pedro ] ✅
 
 #### História 6: Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
 Tarefas:
