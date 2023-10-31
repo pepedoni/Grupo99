@@ -16,14 +16,12 @@ export default {
     namespaced: true,
     state: {
         accessToken: '',
-        user: {
-            name: 'John Doe',
-            type: "client"
-        },
+        user: {},
         loginRequest: {
             email: '',
             password: '',
         },
+        loggedIn: false,
     },
     getters: {
         getField,
@@ -34,8 +32,11 @@ export default {
         },
         setAccessToken(state, payload) {
             state.accessToken = payload.token
-            if(payload.token !== '') {
+            if(payload.token != '') {
+                state.loggedIn = true
                 localStorage.setItem('accessToken', payload.token)
+            } else {
+                state.loggedIn = false
             }
         },
         updateField,
@@ -48,6 +49,12 @@ export default {
                 commit('setUser', parseJwt(response.data.jwt))
                 router.push({ name: 'Home' })
             })
+        },
+        logout({ commit, state }) {
+            commit('setAccessToken', {token: ''})
+            commit('setUser', {})
+            localStorage.removeItem('accessToken')
+            router.push({ name: 'Login' })
         },
         checkToken({ commit, state }) {
             if(!state.accessToken && !localStorage.getItem('accessToken')) {

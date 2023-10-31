@@ -6,11 +6,14 @@
       </v-app-bar-title>
       <v-spacer></v-spacer>
 
-      <v-btn @click="goToHome">
+      <v-btn @click="goToHome" v-if="loggedIn">
         Home
       </v-btn>
       <v-btn v-if="user.type == 'admin'" @click="goToUsers">
         Usuários
+      </v-btn>
+      <v-btn v-if="loggedIn" @click="logout">
+        Logout
       </v-btn>
     </v-app-bar>
   </v-layout>
@@ -24,9 +27,10 @@ import { mapState, mapActions } from 'vuex'
 export default {
   name: 'AppBar',
   computed: {
-    ...mapState('login', ['user']),
+    ...mapState('login', ['user', 'loggedIn']),
   },
   methods: {
+    ...mapActions('login', ['logout']),
     goToHome() {
       router.push({ name: 'Home' })
     },
