@@ -123,6 +123,9 @@ Retorna 200 OK. Usado para validar se aplicação está de pé.
 ```
 
 ### `POST /serviceOrder`
+
+Cria uma ordem de serviço. Se o tipo de usuário passado no jwt for "client", utiliza o clientId do mesmo.
+
 -header ``authorization: JWT_TOKEN`` (obtido na rota de login)
 - Body: 
 ```
@@ -130,7 +133,7 @@ Retorna 200 OK. Usado para validar se aplicação está de pé.
   "device": "string",
   "problemDescription": "string",
   "status": "string (waitingApproval | refused | repairing | finished)",
-  "clientId": "number"
+  "clientId"?: "number"
 }
 ```
 
@@ -147,6 +150,8 @@ Retorna 200 OK. Usado para validar se aplicação está de pé.
 ```
 
 ### `GET /serviceOrder`
+Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", utiliza o clientId do mesmo.
+
 -header ``authorization: JWT_TOKEN`` (obtido na rota de login)
 - Body: 
 ```

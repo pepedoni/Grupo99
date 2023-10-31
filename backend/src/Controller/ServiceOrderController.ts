@@ -11,7 +11,11 @@ export default class ServiceOrderController {
 
   createServiceOrder: RequestHandler = async (request, response) => {
     try {
-      const serviceOrder = await this.serviceOrderService.createServiceOrder(request.body as ServiceOrder);
+      const serviceOrderData = request.body as ServiceOrder;
+      if (response.locals.user.type == "client") {
+        serviceOrderData.clientId = response.locals.user.userId;
+      }
+      const serviceOrder = await this.serviceOrderService.createServiceOrder(serviceOrderData);
 
       return response.status(201).json(serviceOrder);
     } catch (error: any) {
