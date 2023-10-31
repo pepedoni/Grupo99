@@ -13,16 +13,16 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 import store from './store'
-import axios from 'axios'
 import vuetify from './config/vuetify'
+import axios from './config/axios'
+
 
 const app = createApp(App)
 
 registerPlugins(app)
 app.use(store)
+store.dispatch('login/checkToken')
 app.use(vuetify)
-
-axios.defaults.baseURL = 'http://127.0.0.1:3001'
 
 app.config.globalProperties.$axios = axios
 app.mount('#app')

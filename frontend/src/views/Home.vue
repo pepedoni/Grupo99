@@ -17,6 +17,9 @@ import { mapState, mapActions } from 'vuex'
 export default {
   computed: {
     ...mapState('login', ['user']),
+  },
+  methods: {
+    ...mapActions('login', ['checkToken']),
   }
 }
 </script>

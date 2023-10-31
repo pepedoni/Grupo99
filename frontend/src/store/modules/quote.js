@@ -1,5 +1,5 @@
 import { getField, updateField } from 'vuex-map-fields';
-import axios from 'axios'
+import axios from '../../config/axios'
 import router from '@/router'
 
 export default {

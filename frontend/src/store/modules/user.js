@@ -1,5 +1,5 @@
 import { getField, updateField } from 'vuex-map-fields';
-import axios from 'axios'
+import axios from '../../config/axios'
 import router from '@/router'
 
 export default {
@@ -25,15 +25,15 @@ export default {
     },
     actions: {
         createUser({ commit, state }) {
-            axios.post('/users', state.newUser).then(response => {
+            axios.post('/user', state.newUser).then(response => {
                 router.push({ name: 'Users' })
             }).catch(error => {
                 console.log(error)
             })
         },
         getUsers({ commit, state }) {
-            axios.get('/users').then(response => {
-                commit('setItems', { items: response.data })
+            axios.get('/user').then(response => {
+                commit('setItems', { items: response.data.users })
             }).catch(error => {
                 console.log(error)
             })

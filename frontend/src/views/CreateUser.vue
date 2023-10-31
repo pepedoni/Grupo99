@@ -54,7 +54,7 @@
     export default {
         computed: {
             ...mapState('user', ['user']),
-            ...mapFields('user', ['newUser.name', 'newUser.type', 'newUser.email', 'newUser.password']),
+            ...mapFields('user', ['newUser.name', 'newUser.type', 'newUser.email', 'newUser.password', 'newUser.phoneNumber']),
         },
         data() {
             return {

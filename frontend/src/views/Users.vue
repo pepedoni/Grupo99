@@ -31,8 +31,7 @@
                     { title: 'Nome', align: 'end', key: 'name' },
                     { title: 'Email', align: 'end', key: 'email' },
                     { title: 'Tipo', align: 'end', key: 'type' },
-                    { title: 'Telefone', align: 'end', key: 'phoneNumber' },
-                    { title: 'Status', align: 'end', key: 'status' },
+                    { title: 'Telefone', align: 'end', key: 'phoneNumber' }
                 ],
                 itemsPerPage: 10
             }
