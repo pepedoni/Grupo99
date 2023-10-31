@@ -17,5 +17,9 @@ export default class QuoteService implements IQuoteService {
     return await this.quoteRepository.save(createdQuote);
   }
 
+  public async listQuote(listQuote: Partial<Quote>): Promise<Quote[]> {
+    const quotes = await this.quoteRepository.findBy(listQuote)
+    return quotes;
+  }
 
 }

@@ -20,6 +20,7 @@ const router = Router();
   router.get('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.listServiceOrder);
 
   router.post('/quote', (req, res, next) => validateJwtMiddleware(req, res, next, []), QuoteController.createQuote);
+  router.get('/quote', (req, res, next) => validateJwtMiddleware(req, res, next, []), QuoteController.listQuote);
 
 })();
 

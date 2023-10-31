@@ -167,7 +167,13 @@ Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", 
     "device": "string",
     "problemDescription": "string",
     "status": "string (waitingApproval | refused | repairing | finished)",
-    "clientId": "number"
+    "clientId": "number",
+    "quote": {
+      "id": "number",
+      "value": "number",
+      "hoursExpected": "number",
+      "serviceOrderId": "number"
+    }
   }
 ]
 ```
@@ -181,6 +187,28 @@ Lista as ordems de serviço. Se o tipo de usuário passado no jwt for "client", 
   "value": "number",
   "hoursExpected": "number",
 	"serviceOrderId": "number"
+}
+```
+- Response: 
+```
+"serviceOrders": [
+  {
+    "id": "number",
+    "value": "number",
+    "hoursExpected": "number",
+    "serviceOrderId": "number"
+  }
+]
+```
+
+### `GET /quote`
+
+-header ``authorization: JWT_TOKEN`` (obtido na rota de login)
+- Body: 
+```
+{
+  "id"?: "number",
+	"serviceOrderId"?: "number"
 }
 ```
 - Response: 
