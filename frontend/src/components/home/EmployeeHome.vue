@@ -3,7 +3,7 @@
       <v-col
         cols="auto"
       >
-        <v-card height="200" max-width="400">
+        <v-card height="180" max-width="400">
             <v-card-title>Histórico de Serviços</v-card-title>
             <v-card-item>
             <div>
@@ -23,7 +23,7 @@
       <v-col
         cols="auto"
       >
-        <v-card height="200" max-width="400">
+        <v-card height="180" max-width="400">
             <v-card-title>Orçamentos Pendentes</v-card-title>
             <v-card-item>
             <div>
@@ -45,7 +45,6 @@
 </template>
 
 <script>
-
 export default {
   computed: {
   },

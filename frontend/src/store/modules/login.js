@@ -62,9 +62,10 @@ export default {
             } else {
                 let jwt = {}
                 let now = new Date()
+                let timeNow = now.getTime() / 1000
                 if(!state.accessToken) {
                     jwt = parseJwt(localStorage.getItem('accessToken'))
-                    if(jwt.iat < now.getTime() || !jwt.iat) {
+                    if(jwt.iat < timeNow|| !jwt.iat) {
                         commit('setAccessToken', {token: ''})
                         localStorage.removeItem('accessToken')
                         router.push({ name: 'Login' })
@@ -74,7 +75,7 @@ export default {
                     }
                 } else if( localStorage.getItem('accessToken') ) {
                     jwt = parseJwt(localStorage.getItem('accessToken'))
-                    if(jwt.iat < now.getTime() || !jwt.iat) {
+                    if(jwt.iat < timeNow|| !jwt.iat) {
                         commit('setAccessToken', {token: ''})
                         localStorage.removeItem('accessToken')
                         router.push({ name: 'Login' })
