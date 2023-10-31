@@ -18,6 +18,16 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: () => import('@/views/Login.vue'),
+      },
+      {
+        path: '/users',
+        name: 'Users',
+        component: () => import('@/views/Users.vue'),
+      },
+      {
+        path: '/users/create',
+        name: 'CreateUser',
+        component: () => import('@/views/CreateUser.vue'),
       }
     ],
   },
