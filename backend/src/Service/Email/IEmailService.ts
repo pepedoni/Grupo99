@@ -1,3 +1,3 @@
 export default interface IEmailService {
-    sendEmail(serviceOrderId: number): Promise<void>;
+    sendEmail(serviceOrderId: number, clientEmail: string): Promise<void>;
 }

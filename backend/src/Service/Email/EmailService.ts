@@ -14,12 +14,14 @@ export default class EmailService implements IEmailService {
     });
   }
 
-  async sendEmail(serviceOrderId: number) {
+  async sendEmail(serviceOrderId: number, clientEmail: string) {
     const mailOptions = {
       from: 'naorespondergrupo99@gmail.com',
-      to: "clienteTeste@grupo99.com",
+      to: clientEmail,
       subject: "Atualização de Ordem De Serviço",
-      text: "<p>A sua ordem de serviço de ID " + serviceOrderId + " foi atualizada.</p>"
+      html: "<p>Prezado cliente,</p>"+
+            "<p>A sua ordem de serviço de ID " + serviceOrderId + " foi atualizada."+
+            "<br/> Favor conferir o status em nosso site</p>"
     };
 
     try {

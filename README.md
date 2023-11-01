@@ -117,5 +117,5 @@ Tarefas:
 Tarefas:
 
 - Configurar serviço de smtp [ Mateus ] ✅
-- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Mateus ]
+- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Mateus ] ✅
  
