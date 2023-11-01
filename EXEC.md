@@ -6,7 +6,7 @@
 # 
 # To run the backend project, navigate to the project directory and run the following commands:
 # - npm install
+# - cp sample.env .env
 # - npm start
-# - cp backend/.sample.env .env
 #
 # Make sure to have the necessary dependencies installed before running the projects.
