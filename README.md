@@ -117,5 +117,10 @@ Tarefas:
 Tarefas:
 
 - Configurar serviço de smtp [ Mateus ] ✅
-- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Mateus ]
+- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Mateus ] ✅
+
+### Arquitetura  
+
+![image](https://github.com/pepedoni/Grupo99/assets/54727241/8a118e1a-881d-4323-bece-528ef4a3e109)
+
  
