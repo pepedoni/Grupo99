@@ -10,6 +10,10 @@ export default {
             device: '',
             problemDescription: ''
         },
+        newQuote: {
+            value: 0.00,
+            hoursExpected: 0
+        },
         order: {}
     },
     getters: {
@@ -66,6 +70,13 @@ export default {
             }).catch(error => {
                 console.log(error)
             })
-        },
+        }, 
+        createQuote({ commit, state }, payload) {
+            axios.post('/quote', { serviceOrderId: payload.id, ...state.newQuote}).then(response => {
+                router.push('/pendingQuotes')
+            }).catch(error => {
+                console.log(error)
+            })
+        }
     },
 }
