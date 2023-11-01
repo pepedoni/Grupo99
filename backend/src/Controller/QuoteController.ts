@@ -13,7 +13,7 @@ export default class QuoteController {
     try {
       const quoteData = request.body as Quote;
 
-      const quote = await this.quoteService.createQuote(quoteData)
+      const quote = await this.quoteService.createQuote(quoteData, response.locals.user.userId)
 
       return response.status(201).json(quote);
     } catch (error: any) {

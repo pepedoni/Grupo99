@@ -106,14 +106,12 @@ Tarefas:
 Tarefas:
 
 - Criar rota para atualizar status do serviço [ Rafael ] ✅
-- Criar tela que lista serviços que já passaram da etapa de orçamento [ Rafael ]
-- Implementar ação de “iniciar serviço” [ Giuliano ]
-- Implementar ação de “serviço aguardando peças” [ Giuliano ]
-- Implementar ação de “serviço finalizado” [ Giuliano ]
-- Implementar ação de “serviço entregue” [ Giuliano ]
+- Criar tela que lista serviços que já passaram da etapa de orçamento [ Giuliano ] ✅
+- Implementar ação de “serviço finalizado” [ Pedro ]
+- Implementar ação de “serviço entregue” [ Pedro ]
 
 
-#### História 8: Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei.
+#### História 8: Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei. ✅
 Tarefas:
 
 - Configurar serviço de smtp [ Mateus ] ✅

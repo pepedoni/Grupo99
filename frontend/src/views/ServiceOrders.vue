@@ -12,8 +12,16 @@
     import ServiceOrdersList from '@/components/serviceOrders/ServiceOrdersList.vue'
   
     export default {
+        computed: {
+            ...mapState('login', ['user']),
+        },
         created() {
-            this.getServiceOrders()
+            console.log(this.user)
+            if(this.user.type == 'client') 
+                this.getServiceOrders()
+            else if(this.user.type == 'employee' || this.user.type == 'admin') {
+                this.getServiceOrdersByEmployee()
+            }
         },
         components: {
             'service-order-list': ServiceOrdersList
@@ -29,7 +37,7 @@
             }
         },
         methods: {
-            ...mapActions('serviceOrder', ['getServiceOrders']),
+            ...mapActions('serviceOrder', ['getServiceOrders', 'getServiceOrdersByEmployee']),
         }
     }
 </script>

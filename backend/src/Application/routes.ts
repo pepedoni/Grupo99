@@ -18,6 +18,7 @@ const router = Router();
 
   router.post('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.createServiceOrder);
   router.get('/serviceOrder', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.listServiceOrder);
+  router.get('/serviceOrder/employee', (req, res, next) => validateJwtMiddleware(req, res, next, ['client', 'admin']), ServiceOrderController.listServiceOrderByEmployee);
   router.patch('/serviceOrder/:id', (req, res, next) => validateJwtMiddleware(req, res, next, []), ServiceOrderController.updateServiceOrder);
 
   router.post('/quote', (req, res, next) => validateJwtMiddleware(req, res, next, []), QuoteController.createQuote);

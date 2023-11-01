@@ -5,7 +5,7 @@
                 <h1>{{ order.device }}</h1>
             </v-card-title>
             <br>
-            <v-row>
+            <v-row v-if="user.type == 'client' && order.status == 'waitingApproval'">
                 <v-col cols="auto">
                     <v-btn color="primary" @click="approveQuote(order)">Aprovar</v-btn>
                 </v-col>
@@ -63,6 +63,7 @@
 
     export default {
         computed: {
+            ...mapState('login', ['user']),
             ...mapState('serviceOrder', ['order']),
         },
         data() {
@@ -70,7 +71,7 @@
             }
         },
         methods: {
-            ...mapActions('serviceOrder', ['getServiceOrder', 'approveQuote', 'refuseQuote']),
+            ...mapActions('serviceOrder', ['getServiceOrder', 'updateStatusServiceOrder']),
             getStatus() {
                 switch (this.order.status) {
                     case 'waitingQuote':

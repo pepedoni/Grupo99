@@ -7,12 +7,14 @@ export default class ServiceOrder {
     problemDescription: string,
     status: "waitingQuote" | "waitingApproval" | "refused" | "repairing" | "finished" | "delivered",
     clientId: number,
+    employeeId?: number
   ) {
     this.id = id;
     this.device = device;
     this.problemDescription = problemDescription;
     this.status = status;
     this.clientId = clientId;
+    this.employeeId = employeeId;
   }
 
   @PrimaryGeneratedColumn('increment')
@@ -29,4 +31,7 @@ export default class ServiceOrder {
 
   @Column({ type: 'int' })
   clientId: number
+
+  @Column({ type: 'int', nullable: true })
+  employeeId?: number
 }

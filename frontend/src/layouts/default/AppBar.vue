@@ -15,8 +15,8 @@
       <v-btn v-if="user.type == 'employee'" @click="goToPendingQuotes">
         Orçamentos
       </v-btn>
-      <v-btn v-if="user.type == 'employee' || user.type == 'admin'" @click="goToServiceOrders">
-        Serviços
+      <v-btn @click="goToServiceOrders">
+        {{ (user.type == 'employee' || user.type == 'admin') ? 'Serviços' : 'Solicitações' }}
       </v-btn>
       <v-btn v-if="loggedIn" @click="logout">
         Logout

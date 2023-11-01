@@ -10,10 +10,11 @@ export default class QuoteService implements IQuoteService {
     this.quoteRepository = quoteRepository;
     this.serviceOrderRepository = serviceOrderRepository;
   }
-  public async createQuote(quote: Quote): Promise<Quote> {
+  public async createQuote(quote: Quote, employeeId: number): Promise<Quote> {
     const createdQuote = await this.quoteRepository.create(quote);
 
-    await this.serviceOrderRepository.update({ id: quote.serviceOrderId }, { status: "waitingApproval" });
+    await this.serviceOrderRepository.update({ id: quote.serviceOrderId }, { status: "waitingApproval", employeeId });
+
     return await this.quoteRepository.save(createdQuote);
   }
 

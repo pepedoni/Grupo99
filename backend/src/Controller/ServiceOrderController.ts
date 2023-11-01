@@ -55,4 +55,16 @@ export default class ServiceOrderController {
       return response.status(400).json({ error: error.message });
     }
   };
+
+  listServiceOrderByEmployee: RequestHandler = async (request, response) => {
+    try {
+      const serviceOrderFilter = request.query as Partial<ServiceOrder>
+
+      const serviceOrders = await this.serviceOrderService.listServiceOrderByEmployee(serviceOrderFilter, response.locals.user.userId);
+
+      return response.status(200).json({ serviceOrders });
+    } catch (error: any) {
+      return response.status(400).json({ error: error.message });
+    }
+  }
 }

@@ -35,7 +35,33 @@
                     >mdi-receipt-text-plus-outline</v-icon
                     >
                 </template>
-                <span>Criar Orçamento {{ mode }}</span>
+                <span>Criar Orçamento</span>
+            </v-tooltip>
+            <v-tooltip bottom v-if="this.origin == 'service-orders' && item.status == 'repairing'">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-icon
+                    small
+                    v-on="on"
+                    v-bind="attrs"
+                    class="mr-2"
+                    @click="updateStatusServiceOrder({ item, newStatus: 'finished' })"
+                    >mdi-check</v-icon
+                    >
+                </template>
+                <span>Finalizar Serviço</span>
+            </v-tooltip>
+            <v-tooltip bottom v-if="this.origin == 'service-orders' && item.status == 'finished'">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-icon
+                    small
+                    v-on="on"
+                    v-bind="attrs"
+                    class="mr-2"
+                    @click="updateStatusServiceOrder({ item, newStatus: 'delivered' })"
+                    >mdi-package-variant-closed-check</v-icon
+                    >
+                </template>
+                <span>Entregar Serviço</span>
             </v-tooltip>
         </template>
     </v-data-table>
@@ -44,7 +70,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default {
     props: [
@@ -56,6 +82,7 @@ export default {
         ...mapState('serviceOrder', ['items'])
     },
     methods: {
+        ...mapActions('serviceOrder', ['updateStatusServiceOrder']),
         getStatus(status) {
             switch (status) {
                 case 'waitingQuote':

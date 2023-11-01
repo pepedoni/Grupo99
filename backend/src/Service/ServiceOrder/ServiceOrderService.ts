@@ -33,4 +33,9 @@ export default class ServiceOrderService implements IServiceOrderService {
     return updateServiceOrder
   }
 
+  async listServiceOrderByEmployee(serviceOrderFilter: Partial<ServiceOrder>, employeeId: number): Promise<ServiceOrder[]> {
+    const serviceOrders = await this.serviceOrderRepository.findBy({ ...serviceOrderFilter, employeeId });
+    return serviceOrders;
+  }
+
 }

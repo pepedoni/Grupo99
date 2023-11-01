@@ -4,4 +4,5 @@ export interface IServiceOrderService {
   createServiceOrder(serviceOrder: ServiceOrder): Promise<ServiceOrder>;
   listServiceOrder(serviceOrderFilter: Partial<ServiceOrder>): Promise<ServiceOrder[]>;
   updateServiceOrder(serviceOrderId: number, serviceOrderData: Partial<ServiceOrder>): Promise<ServiceOrder | null>;
+  listServiceOrderByEmployee(serviceOrderFilter: Partial<ServiceOrder>, employeeId: number): Promise<ServiceOrder[]>;
 }

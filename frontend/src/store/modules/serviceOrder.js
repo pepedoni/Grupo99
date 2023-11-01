@@ -31,6 +31,7 @@ export default {
     actions: {
         approveQuote({ commit, dispatch, state }, payload) {
             axios.patch(`/serviceOrder/${payload.id}`, {id: payload.id, status: "repairing"}).then(response => {
+                payload.status = "repairing"
                 dispatch('getServiceOrder', {id: payload.id})
             }).catch(error => {
                 console.log(error)
@@ -65,6 +66,7 @@ export default {
             })
         },
         refuseQuote({ commit, dispatch, state }, payload) {
+            payload.status = "refused"
             axios.patch(`/serviceOrder/${payload.id}`, {id: payload.id, status: "refused"}).then(response => {
                 dispatch('getServiceOrder', {id: payload.id})
             }).catch(error => {
@@ -74,6 +76,21 @@ export default {
         createQuote({ commit, state }, payload) {
             axios.post('/quote', { serviceOrderId: payload.id, ...state.newQuote}).then(response => {
                 router.push('/pendingQuotes')
+            }).catch(error => {
+                console.log(error)
+            })
+        },
+        getServiceOrdersByEmployee({commit}) {
+            axios.get('/serviceOrder/employee').then(response => {
+                commit('setItems', { items: response.data.serviceOrders })
+            }).catch(error => {
+                console.log(error)
+            })
+        },
+        updateStatusServiceOrder({ dispatch }, payload) {
+            axios.patch(`/serviceOrder/${payload.item.id}`, {id: payload.item.id, status: payload.newStatus}).then(response => {
+                payload.item.status = payload.newStatus
+                dispatch('getServiceOrdersByEmployee')
             }).catch(error => {
                 console.log(error)
             })
