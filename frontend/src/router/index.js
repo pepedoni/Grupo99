@@ -59,7 +59,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory("http://localhost:3000"),
   routes,
 })
 
