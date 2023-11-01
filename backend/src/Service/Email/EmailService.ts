@@ -9,17 +9,17 @@ export default class EmailService implements IEmailService {
       service: 'gmail',
       auth: {
         user: 'naorespondergrupo99@gmail.com',
-        pass: 'mudar123',
+        pass: 'bqec chph aevt bkxs',
       },
     });
   }
 
-  async sendEmail(to: string, subject: string, text: string) {
+  async sendEmail(serviceOrderId: number) {
     const mailOptions = {
       from: 'naorespondergrupo99@gmail.com',
-      to: to,
-      subject: subject,
-      text: text,
+      to: "clienteTeste@grupo99.com",
+      subject: "Atualização de Ordem De Serviço",
+      text: "<p>A sua ordem de serviço de ID " + serviceOrderId + " foi atualizada.</p>"
     };
 
     try {

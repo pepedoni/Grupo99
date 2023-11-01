@@ -116,6 +116,6 @@ Tarefas:
 #### História 8: Como cliente, eu gostaria de receber notificações por e-mail quando houver uma atualização no status de um serviço que solicitei.
 Tarefas:
 
-- Configurar serviço de smtp [ Pedro ]
-- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Pedro ]
+- Configurar serviço de smtp [ Mateus ] ✅
+- Enviar e-mail para cliente cadastrado sempre que houver uma atualização no serviço [ Mateus ]
  
