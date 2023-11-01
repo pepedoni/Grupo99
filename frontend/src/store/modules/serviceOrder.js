@@ -30,7 +30,7 @@ export default {
     },
     actions: {
         approveQuote({ commit, dispatch, state }, payload) {
-            axios.put(`/serviceOrder/approveQuote/${payload.id}`).then(response => {
+            axios.patch(`/serviceOrder/${payload.id}`, {id: payload.id, status: "repairing"}).then(response => {
                 dispatch('getServiceOrder', {id: payload.id})
             }).catch(error => {
                 console.log(error)
@@ -65,7 +65,7 @@ export default {
             })
         },
         refuseQuote({ commit, dispatch, state }, payload) {
-            axios.put(`/serviceOrder/refuseQuote/${payload.id}`).then(response => {
+            axios.patch(`/serviceOrder/${payload.id}`, {id: payload.id, status: "refused"}).then(response => {
                 dispatch('getServiceOrder', {id: payload.id})
             }).catch(error => {
                 console.log(error)

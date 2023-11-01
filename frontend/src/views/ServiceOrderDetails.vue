@@ -36,7 +36,7 @@
                         <b>Valor do reparo:</b> 
                     </v-col>
                     <v-col align="right">
-                        {{ order.value ? order.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 0 }}
+                        {{ order?.quote?.value ? order.quote.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 0 }}
                     </v-col>
                 </v-row> 
                 <v-row v-if="order.status != 'waitingQuote'">

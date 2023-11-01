@@ -84,10 +84,10 @@ Tarefas:
 - Criar endpoint que retorna a lista de serviços [ Rafael ] ✅
 
 
-#### História 5: Como cliente, eu gostaria de aprovar ou recusar orçamento para um serviço que eu solicitei
+#### História 5: Como cliente, eu gostaria de aprovar ou recusar orçamento para um serviço que eu solicitei ✅
 Tarefas:
 
-- Implementar tela para visualização do orçamento [ Giuliano ]
+- Implementar tela para visualização do orçamento [ Giuliano ] ✅
 - Implementar rota de aprovação/reprovação do orçamento [ Rafael ] ✅
 - Implementar botão para aprovar orçamento [ Pedro ] ✅
 - Implementar botão para reprovar orçamento [ Pedro ] ✅
