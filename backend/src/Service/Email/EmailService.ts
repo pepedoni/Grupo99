@@ -19,9 +19,7 @@ export default class EmailService implements IEmailService {
       from: 'naorespondergrupo99@gmail.com',
       to: clientEmail,
       subject: "Atualização de Ordem De Serviço",
-      html: "<p>Prezado cliente,</p>"+
-            "<p>A sua ordem de serviço de ID " + serviceOrderId + " foi atualizada."+
-            "<br/> Favor conferir o status em nosso site</p>"
+      html: buildHtml(serviceOrderId)
     };
 
     try {
@@ -31,4 +29,43 @@ export default class EmailService implements IEmailService {
       console.error('Erro ao enviar e-mail:', error);
     }
   }
+}
+
+function buildHtml(serviceOrderId: number): string {
+  return `
+  <html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      .content {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Atualização de Ordem de Serviço</h1>
+      </div>
+      <div class="content">
+        <p>Prezado cliente,</p>
+        <p>A sua ordem de serviço de ID ${serviceOrderId} foi atualizada.</p>
+        <p>Por favor, confira o status em nosso site para obter mais detalhes.</p>
+      </div>
+    </div>
+  </body>
+  </html>
+`;
 }
