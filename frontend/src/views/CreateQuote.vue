@@ -61,7 +61,7 @@
             }
         },
         methods: {
-            ...mapActions('serviceOrder', ['createQuote']),
+            ...mapActions('serviceOrder', ['createQuote', 'getServiceOrder']),
             getStatus() {
                 switch (this.order.status) {
                     case 'waitingQuote':

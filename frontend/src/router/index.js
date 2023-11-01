@@ -48,6 +48,11 @@ const routes = [
         path: '/serviceOrder/:id',
         name: 'ServiceOrderDetails',
         component: () => import('@/views/ServiceOrderDetails.vue'),
+      },
+      {
+        path: '/serviceOrder/:id/createQuote',
+        name: 'CreateQuote',
+        component: () => import('@/views/CreateQuote.vue'),
       }
     ],
   },

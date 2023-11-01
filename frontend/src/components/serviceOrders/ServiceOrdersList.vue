@@ -24,6 +24,19 @@
                 </template>
                 <span>Informações</span>
             </v-tooltip>
+            <v-tooltip bottom v-if="this.origin == 'pending-quotes' && item.status == 'waitingQuote'">
+                <template v-slot:activator="{ on, attrs }">
+                    <v-icon
+                    small
+                    v-on="on"
+                    v-bind="attrs"
+                    class="mr-2"
+                    @click="goToCreateQuote({ item: item })"
+                    >mdi-receipt-text-plus-outline</v-icon
+                    >
+                </template>
+                <span>Criar Orçamento {{ mode }}</span>
+            </v-tooltip>
         </template>
     </v-data-table>
     </div>
@@ -37,6 +50,7 @@ export default {
     props: [
         'headers',
         'itemsPerPage',
+        'origin'
     ],
     computed: {
         ...mapState('serviceOrder', ['items'])
@@ -60,6 +74,9 @@ export default {
         },
         showServiceOrderDetail({ item }) {
             this.$router.push(`/serviceOrder/${item.id}`)
+        },
+        goToCreateQuote({ item }) {
+            this.$router.push(`/serviceOrder/${item.id}/createQuote`)
         }
     }
 }

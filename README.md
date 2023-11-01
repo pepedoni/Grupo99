@@ -92,14 +92,14 @@ Tarefas:
 - Implementar botão para aprovar orçamento [ Pedro ] ✅
 - Implementar botão para reprovar orçamento [ Pedro ] ✅
 
-#### História 6: Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado
+#### História 6: Como funcionário, eu gostaria de visualizar os serviços para os quais o orçamento não foi criado ✅
 Tarefas:
 
 - Criar entidade de Orçamento [ Pedro ] ✅
 - Criar tela para listagem de serviços pendentes de orçamento [ Rafael ] ✅
 - Implementar rota que lista serviços pendentes de orçamento [ Rafael ] ✅
 - Implementar rota de criação de orçamento [ Rafael ] ✅
-- Implementar tela com formulário para criação de orçamento [ Giuliano ]
+- Implementar tela com formulário para criação de orçamento [ Giuliano ] ✅
 
 
 #### História 7: Como funcionário, eu gostaria de iniciar um novo serviço e atualizar o andamento do mesmo
