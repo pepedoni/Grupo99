@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <h1>Serviços</h1>
         <service-order-list origin="service-orders" :items="items" :headers="headers" :itemsPerPage="10"></service-order-list>
     </v-container>
      

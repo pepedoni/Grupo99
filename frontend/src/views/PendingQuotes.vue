@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <h1>Orçamentos Pendentes</h1>
         <service-order-list origin="pending-quotes" :items="items" :headers="headers" :itemsPerPage="10"></service-order-list>
     </v-container>
      
