@@ -12,6 +12,12 @@
       <v-btn v-if="user.type == 'admin'" @click="goToUsers">
         Usuários
       </v-btn>
+      <v-btn v-if="user.type == 'employee'" @click="goToPendingQuotes">
+        Orçamentos
+      </v-btn>
+      <v-btn v-if="user.type == 'employee' || user.type == 'admin'" @click="goToServiceOrders">
+        Serviços
+      </v-btn>
       <v-btn v-if="loggedIn" @click="logout">
         Logout
       </v-btn>
@@ -36,7 +42,13 @@ export default {
     },
     goToUsers() {
       router.push({ name: 'Users' })
-    }
+    },
+    goToPendingQuotes() {
+      router.push({ name: 'PendingQuotes' })
+    },
+    goToServiceOrders() {
+      router.push({ name: 'ServiceOrders' })
+    },
   }
 };
 </script>
